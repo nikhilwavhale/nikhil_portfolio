@@ -47,11 +47,11 @@ const Navbar = () => {
             <FaGraduationCap size={15} /> <span className="nav-text">Education</span>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="#projects">
             <FaBriefcase size={15} /> <span className="nav-text">Projects</span>
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="#contact">
             <FaEnvelope size={15} /> <span className="nav-text">Contact</span>
