@@ -1,0 +1,105 @@
+.skills-section {
+  padding: 8rem 8%;
+  background-color: var(--bg-color, #030712); /* Extremely deep dark background */
+  position: relative;
+}
+
+.skills-header {
+  text-align: left; /* Moving away from basic center alignment */
+  margin-bottom: 4rem;
+  max-width: 600px;
+}
+
+.skills-subtitle {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skills-subtitle::before {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: #38bdf8;
+}
+
+.skills-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-main, #f8fafc);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+/* The New Bento-Style Grid */
+.skills-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+}
+
+/* Premium Card Styling */
+.category-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  padding: 2.5rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.category-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(56, 189, 248, 0.3);
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.2) 100%);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.category-title {
+  font-size: 1.3rem;
+  color: #f8fafc;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+/* Elite Skill Pills */
+.skills-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-pill {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  padding: 0.6rem 1.2rem;
+  border-radius: 100px; /* Perfect pill shape */
+  font-size: 0.85rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* The High-End Hover Invert Effect */
+.skill-pill:hover {
+  background: #f8fafc;
+  color: #030712;
+  border-color: #f8fafc;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .skills-section { padding: 5rem 6%; }
+  .skills-title { font-size: 2.5rem; }
+}

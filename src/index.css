@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevents side-scrolling */
+  background-color: #0b0f17; /* Matches your dark theme */
+}
+
+/* Override Vite's default root padding */
+#root {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+body.light-mode {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Make alternating sections slightly different shades of premium cool-gray */
+body.light-mode .hero-container,
+body.light-mode .education-section,
+body.light-mode .contact-section {
+  background-color: #f8fafc; /* Crisp white-gray */
+}
+
+body.light-mode .skills-section,
+body.light-mode .projects-section {
+  background-color: #f1f5f9; /* Slightly deeper slate-gray for contrast */
+}
+
+/* 2. Premium Typography & Gradient Adjustments */
+body.light-mode .hero-title,
+body.light-mode .skills-title,
+body.light-mode .education-title,
+body.light-mode .projects-title,
+body.light-mode .contact-title,
+body.light-mode .category-title,
+body.light-mode .project-title,
+body.light-mode .edu-degree {
+  color: #0f172a; /* Deep ink, not pure black */
+}
+
+/* Make the gradient text pop perfectly on light backgrounds */
+body.light-mode .gradient-text {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .hero-description,
+body.light-mode .project-desc,
+body.light-mode .edu-desc,
+body.light-mode .edu-institution,
+body.light-mode .contact-label {
+  color: #475569;
+}
+
+/* 3. Retain the Colored Subtitles! (Fixes hidden/boring headers) */
+body.light-mode .skills-subtitle,
+body.light-mode .education-subtitle,
+body.light-mode .projects-subtitle,
+body.light-mode .contact-subtitle {
+  color: #0284c7; /* Richer blue for light mode legibility */
+}
+body.light-mode .skills-subtitle::before {
+  background: #0284c7;
+}
+
+/* 4. Glassmorphic Cards (Crisp white with colored soft shadows) */
+body.light-mode .category-card,
+body.light-mode .dynamic-card,
+body.light-mode .contact-card,
+body.light-mode .education-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.04); /* Subtle blue tinted shadow */
+}
+
+body.light-mode .category-card:hover,
+body.light-mode .dynamic-card:hover,
+body.light-mode .contact-card:hover,
+body.light-mode .education-card:hover {
+  border-color: rgba(2, 132, 199, 0.3);
+  box-shadow: 0 20px 40px rgba(2, 132, 199, 0.1);
+  transform: translateY(-6px);
+}
+
+/* 5. Fix Hidden Tags, Pills & Icons (Bringing the color back) */
+body.light-mode .skill-pill {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+body.light-mode .skill-pill:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+body.light-mode .card-tag,
+body.light-mode .tech-tag,
+body.light-mode .edu-period {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+  border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+body.light-mode .icon-wrapper {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+}
+
+body.light-mode .contact-card:hover .icon-wrapper {
+  background: #0284c7;
+  color: #ffffff;
+}
+body.light-mode .contact-value {
+  color: #0f172a;
+}
+
+/* 6. Timeline Specific Fixes */
+body.light-mode .education-timeline::before {
+  background: #cbd5e1;
+}
+body.light-mode .education-card::before {
+  background: #0284c7;
+  border-color: #f8fafc;
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.4);
+}
+
+/* 7. Buttons */
+body.light-mode .btn-secondary,
+body.light-mode .btn-github {
+  color: #0f172a;
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+body.light-mode .btn-secondary:hover,
+body.light-mode .btn-github:hover {
+  background: #f1f5f9;
+  border-color: #0284c7;
+  color: #0284c7;
+}
+
+/* 8. Navbar */
+body.light-mode .navbar {
+  background: rgba(248, 250, 252, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+body.light-mode .nav-logo { color: #0f172a; }
+body.light-mode .nav-links a { color: #475569; }
+body.light-mode .theme-toggle { color: #0f172a; }
+body.light-mode .theme-toggle:hover { background: rgba(0, 0, 0, 0.05); }
+/* 8. Horizontal Light Mode Navbar */
+body.light-mode .navbar-horizontal {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.05);
+}
+body.light-mode .nav-logo { color: #0f172a; }
+body.light-mode .nav-links a { color: #475569; }
+body.light-mode .nav-links a:hover {
+  color: #0284c7;
+  background: rgba(2, 132, 199, 0.08);
+}
+body.light-mode .theme-toggle { color: #475569; }
+body.light-mode .theme-toggle:hover { 
+  background: rgba(2, 132, 199, 0.08);
+  color: #0284c7;
+}
+/* =========================================
+   LIGHT MODE: MINIMAL CONTACT SECTION
+   ========================================= */
+body.light-mode .contact-section {
+  background-color: #f8fafc; /* Clean white */
+}
+
+body.light-mode .contact-massive-title {
+  color: #0f172a;
+}
+
+body.light-mode .contact-email-link {
+  color: #0284c7;
+}
+
+body.light-mode .contact-email-link::after {
+  background-color: #0284c7;
+}
+
+body.light-mode .contact-divider {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .contact-icon-row a {
+  color: #94a3b8;
+}
+
+body.light-mode .contact-icon-row a:hover {
+  color: #0f172a; /* Deep ink on hover */
+}
+
+body.light-mode .copyright {
+  color: #94a3b8;
+}

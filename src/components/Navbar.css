@@ -1,0 +1,113 @@
+/* Floating Glassmorphic Pill (Horizontal) */
+.navbar-horizontal {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #f8fafc;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav-logo span {
+  color: #38bdf8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Links with Icons */
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #38bdf8;
+  transform: rotate(15deg);
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (The Magic Trick)
+   ========================================= */
+@media (max-width: 768px) {
+  .navbar-horizontal {
+    top: 1rem;
+    width: 95%;
+    padding: 0.6rem 1rem;
+  }
+  
+  /* Hide the logo on small screens to give icons more room */
+  .nav-logo {
+    display: none; 
+  }
+  
+  /* Expand the links to fill the whole pill */
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+  
+  /* Hide the text, keep the icons! */
+  .nav-text {
+    display: none;
+  }
+  
+  /* Adjust padding so icons look like circular buttons */
+  .nav-links a {
+    padding: 0.6rem;
+    border-radius: 50%;
+  }
+}
